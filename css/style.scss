@@ -1,7 +1,27 @@
+/* 
+
+Bookmakers - 12th Man
+
+Author: Rik Kendell - @Rikki_Sixx
+Version: 1.0;
+URL: 
+
+CONTENTS - GLOBAL.CSS
+-----------------------------------------
+0. SETUP
+1. BASE STYLES
+2. BASE TYPOGRAPHY & LINKS
+3. GLOBAL LAYOUT & GLOBAL CUSTOM TYPOGRAPHY
+4. CUSTOM LAYOUT & TYPOGRAPHY 
+5. NON-SEMANTIC STYLING 
+
+*/
+
+
 @charset "UTF-8";
-/*------------------------------------*\
-    STYLE.CSS
-\*------------------------------------*/
+/* ==========================================================================
+	0. SETUP
+   ========================================================================== */
 /**
  *
  * sass --watch style.scss:style.min.css --style compressed
@@ -26,36 +46,72 @@
  */
 //@import "ui/example";
 
+
+/* ==========================================================================
+	1. BASE STYLES
+   ========================================================================== */
+
+html {
+	background: #66cc99;
+}
 body {
-	background: #fff;
+	background: #66cc99;
 	color: #003333;
 	font-size: 100%;
+}
+
+
+/* ==========================================================================
+	2. BASE TYPOGRAPHY & LINKS
+   ========================================================================== */
+
+h1 {
+	text-shadow: 2px 2px 2px rgba(0,0,0,0.3);
+	a { 
+		color: #fff; 
+		&:hover { text-decoration: none; } 
+	}
 }
 
 a,
 a:visited { 
 	color: #0099cc; 
-		text-decoration: none; 
 }
 a:hover {
-	text-decoration: underline; 
+	
 }
+
+
+/* ==========================================================================
+	3. GLOBAL LAYOUT & GLOBAL CUSTOM TYPOGRAPHY
+   ========================================================================== */
 
 header {
 	color: #fff;
 	text-align: center;
 }
-section {
-	background: #66cc99;
-}
+
 .container {
 	margin: auto;
 	max-width: 780px;
 	padding: 1em;
 }
-
 .alt {
-	background: none;
+	background: #fff;
+}
+
+
+
+/* ==========================================================================
+	4. CUSTOM LAYOUT & TYPOGRAPHY
+   ========================================================================== */
+
+.involved {
+	float: left;
+}
+.image {
+	float: right;
+	img { max-width: 100%; }
 }
 
 
