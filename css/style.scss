@@ -37,7 +37,7 @@ CONTENTS - GLOBAL.CSS
 @import "vars";
 @import "inuit.css/inuit";
 
-
+$brand-color: #7BC4A6;
 $brand-font: Lato, sans-serif;
 
 
@@ -52,7 +52,7 @@ $brand-font: Lato, sans-serif;
    ========================================================================== */
 
 html {
-	background: #fffedf;
+	background: $brand-color;
 }
 body {
 	color: #333;
@@ -69,6 +69,7 @@ h1 {
 	font-family: Pacifico, sans-serif;
 	font-weight: normal;
 	text-shadow: 2px 2px 2px rgba(0,0,0,0.25);
+	text-align: center;
 	a { 
 		color: #fff; 
 		text-decoration: none;
@@ -95,26 +96,47 @@ a:hover {
 	3. GLOBAL LAYOUT & GLOBAL CUSTOM TYPOGRAPHY
    ========================================================================== */
 
-.header {
-	background: #ffdcdc;
-	text-align: center;
-}
-
 .container {
 	margin: auto;
 	max-width: 780px;
 	padding: 1em;
 }
 .alt {
-	background: #c3a98d;
+	background: #fff;
 }
-
+footer {
+	background: #787878;
+	height: 150px;
+	position: relative;
+	img {
+		height: 195px;
+		top: -45px;
+		width: 195px;
+		position: absolute;
+		margin: auto;
+		text-align: center;
+		left: 0;
+		right: 0;
+	}
+}
 
 
 /* ==========================================================================
 	4. CUSTOM LAYOUT & TYPOGRAPHY
    ========================================================================== */
 
+.logo {
+	background-image: url("../img/devicecream_logo.svg");
+	background-size: cover;
+	height: 500px;
+	margin: auto;
+	width: 500px;
+}
+h1 {
+	a, a:visited {
+		color: #fff;
+	}
+}
 .involved {
 	float: left;
 }
@@ -131,4 +153,32 @@ a:hover {
 		display: inline-block;
 		margin: 0 1em 0 0;
 	}
+}
+
+//Form
+.form { 
+	color: #fff;
+	margin: auto;
+	max-width: 620px;
+	input { 
+		font-size: 1.5em; 
+		width: 100%; 
+	}
+	.small { font-size: 0.8em;}
+}
+label { 
+	font-size: 1.25em;
+	margin: 1em 0 0;  
+}
+input[type=text],
+input[type=email] {
+	background: none;
+	border: 2px solid #fff;
+	color: #fff;
+	padding: 10px;
+}
+.btn {
+	background: #fff;
+	color: $brand-color;
+	margin: 1em 0 0; 
 }
